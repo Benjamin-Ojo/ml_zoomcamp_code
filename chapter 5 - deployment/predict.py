@@ -1,9 +1,10 @@
 # Importing pickle package.
 import pickle
+import numpy as np
 
-model = 'model_C=0.1.bin'
+churn_model = 'model_C=0.1.bin'
 
-with open(model, 'rb') as f_in: 
+with open(churn_model, 'rb') as f_in: 
     model, dv = pickle.load(f_in)
     
 customer = {
@@ -30,6 +31,7 @@ customer = {
 }
 
 def predict_customer(customer, model, dv):
+
     x = dv.transform(customer)
     y_pred = model.predict_proba(x)[:, 1]
     return y_pred[0].round(3)
