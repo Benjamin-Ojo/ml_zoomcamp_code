@@ -2,10 +2,10 @@
 from flask import Flask
 
 # Creating Flask instance.
-app = Flask()
+app = Flask('ping')
 
 # Creating flask rourt with python decorator.
-@app.rourt('/ping',methods = ['GET'])
+@app.route('/ping',methods = ['GET'])
 
 # Defining ping function.
 def ping():
