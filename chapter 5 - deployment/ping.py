@@ -1,5 +1,5 @@
 # importing python packages. 
-from Flask import Flask
+from flask import Flask
 
 # Creating Flask instance.
 app = Flask()
@@ -11,5 +11,5 @@ app = Flask()
 def ping():
     return 'PONG'
 
-if __name__ = '__main__':
+if __name__ == '__main__':
     app.run(debug = True, host='0.0.0.0',  port = 9695)

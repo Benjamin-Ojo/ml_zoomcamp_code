@@ -2,7 +2,7 @@
 import pickle
 import numpy as np
 
-churn_model = 'model_C=0.1.bin'
+churn_model = 'churn-model.bin'
 
 with open(churn_model, 'rb') as f_in: 
     model, dv = pickle.load(f_in)
@@ -27,7 +27,7 @@ customer = {
     'paperlessbilling': 'yes',
     'paymentmethod': 'bank_transfer_(automatic)',
     'monthlycharges': 79.85,
-    'totalcharges': 3320.75
+    'totalcharges': 33.75
 }
 
 def predict_customer(customer, model, dv):

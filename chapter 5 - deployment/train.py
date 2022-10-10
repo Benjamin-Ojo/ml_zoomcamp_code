@@ -92,9 +92,9 @@ auc = roc_auc_score(y_test, y_pred)
 print(auc)
 
 # file tile
-model = f'model_C={c}.bin'
+churn_model = 'churn-model.bin'
 
 # writting model to .bin file. 
-with open(model, 'wb') as f_out: 
+with open(churn_model, 'wb') as f_out: 
     pickle.dump((model, dv), f_out)
 
