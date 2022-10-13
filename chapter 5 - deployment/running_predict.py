@@ -1,8 +1,8 @@
 # Importing Package.
-import request
+import requests
 
 # Local webserver.
-url = 'localhost:1998/predict'
+url = 'http://localhost:1998/predict'
 
 # Customer info.
 customer_id = "8879-zkjof"
