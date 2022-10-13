@@ -31,7 +31,7 @@ def predict():
     result = { 'Churn Probability' :  y_pred, 
                 'Churn' : y_pred >= 0.50}
     
-    return jsonifiy(result)
+    return jsonify(result)
 
 if __name__ == '__main__': 
     app.run(debug = True, host = '0.0.0.0', port = 1998)
