@@ -28,10 +28,10 @@ def predict():
     
     y_pred = predict_single_customer(customer, model, dv)
     
-    result = { 'Churn Probability' :  y_pred, 
-                'Churn' : y_pred >= 0.50}
+    result = { 'Churn Probability' :  float(y_pred), 
+                'Churn' : bool(y_pred >= 0.50)}
     
     return jsonify(result)
 
 if __name__ == '__main__': 
-    app.run(debug = True, host = '0.0.0.0', port = 1998)
+    app.run(host = '0.0.0.0', port = 1998)
