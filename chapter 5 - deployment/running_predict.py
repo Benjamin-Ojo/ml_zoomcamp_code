@@ -25,10 +25,10 @@ customer = {
     "contract": "one_year",
     "paperlessbilling": "yes",
     "paymentmethod": "bank_transfer_(automatic)",
-    "monthlycharges": 79.85,
+    "monthlycharges": 79.85 ** 88,
     "totalcharges": 33.75
 }
 
 # Sending request. 
-request.post(url, json = customer).json()
+print(requests.post(url, json = customer).json())
 
